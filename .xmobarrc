@@ -1,0 +1,17 @@
+Config { font = "-*-terminus-*-*-*-*-12-*-*-*-*-*-*-u"
+       , bgColor = "#003333"
+       , fgColor = "#00CCFF"
+       , position = Top 
+       , lowerOnStart = True
+       , commands = [ Run Network "eth0" ["-L","0","-H","32","--normal","#429942","--high","#A36666"] 20
+                    , Run Cpu ["-L","3","-H","50","--normal","#429942","--high","#A36666"] 10
+                    , Run Memory ["-t","<usedratio>%"] 10
+    		        , Run Date "%D | %H:%M:%S" "date" 10
+		    , Run Com "sh" ["~/source/mpd.sh"] "mpd" 10
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = " %% }{<fc=white>|</fc>%mpd%<fc=white>>|</fc>%cpu% <fc=white>|</fc>%memory%<fc=white>|</fc>%eth0%<fc=white>|</fc>%date%"
+       }
+
