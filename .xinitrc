@@ -1,5 +1,5 @@
 #Set the background using Feh
-feh --bg-tile ~/backgrounds/AL.jpg &
+feh --bg-seamless ~/backgrounds/orgtree.png &
 
 # Set up xcompmgr
 xcompmgr -c &

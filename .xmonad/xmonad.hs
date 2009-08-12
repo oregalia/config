@@ -52,23 +52,21 @@ main = do
 	, borderWidth       = 4
 	, keys              = \c -> mykeys c `M.union` keys defaultConfig c 
 	, normalBorderColor = "#000000"
-	, focusedBorderColor = "#006699"
+	, focusedBorderColor = "#660000"
 	, workspaces        = ["WEB","IRSSI","TERM","IM","MUSIC","MNTR","#"]   
 	, logHook           = do
 			         dynamicLogWithPP  xmobarPP
 			          { ppOutput          = hPutStrLn xmproc
-			          , ppCurrent         = xmobarColor "#00CCFF" ""
-			          , ppHidden          = xmobarColor "#0066CC" ""
+			          , ppCurrent         = xmobarColor "#FF3300" "white" . wrap "[""]"
+			          , ppHidden          = xmobarColor "#666666" "" 
 			          , ppHiddenNoWindows = xmobarColor "#333333" ""
-			          , ppTitle           = xmobarColor "#3399FF" "" . shorten 50
-			          , ppUrgent          = xmobarColor "yellow" "red" 
+			          , ppTitle           = xmobarColor "#FF3300" "" . shorten 50
 			          } 
 
 	}	
 	where
             mykeys (XConfig {modMask = modm}) = M.fromList $
 		[   ((modm, xK_f), spawn "firefox")  	
-		  , ((modm, xK_s), spawn "urxvt -e vim ~/.xmonad/xmonad.hs")
 		  , ((modm .|. shiftMask, xK_apostrophe), spawn "ncmpcpp toggle")
 		  , ((modm .|. shiftMask, xK_comma), spawn "ncmpcpp prev")	
 	          , ((modm .|. shiftMask, xK_period), spawn "ncmpcpp next")
