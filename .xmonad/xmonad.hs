@@ -30,7 +30,7 @@ myManageHook = composeAll
     ,  title     =? "htop"     --> doShift "MNTR"
     ,  title     =? "irssi"    --> doShift "IRSSI"
     ,  title     =? "ncmpcpp"  --> doShift "MUSIC"
-    ,  title     =? "oregalia"  --> doShift "TERM"      
+    ,  title     =? "curiousfocus"  --> doShift "TERM"      
     ] 
 
 
