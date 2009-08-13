@@ -10,7 +10,8 @@ xsetroot -cursor_name left_ptr &
 urxvt -e irssi &
 urxvt -e htop &
 urxvt -e ncmpcpp &
-urxvt -title curiousfocus &
+urxvt -title oregalia &
+
 
 # GUI Apps
 pidgin &
