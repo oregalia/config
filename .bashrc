@@ -3,8 +3,6 @@
 [ -z "$PS1" ] && return
 
 alias ls='ls --color=auto'
-alias pacman='pacman-color'
-alias y='yaourt'
 
 export MPD_HOST="arch-xmonad"
 

@@ -9,7 +9,7 @@ urxvt.urlLauncher: firefox
 urxvt.matcher.button: 1
 urxvt*urgentOnBell: true
 !Theme Fifteen
-*background: rgba:0000/0000/0000/8888
+*background: rgba:0000/0000/0000/AA00
 *foreground: rgb:be/be/be
 ! Black
 *color0:     rgb:00/00/00
