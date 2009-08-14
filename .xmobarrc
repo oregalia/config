@@ -1,11 +1,9 @@
-#this is bullshit
 Config { font = "-*-terminus-*-*-*-*-12-*-*-*-*-*-*-u"
        , bgColor = "black"
        , fgColor = "grey"
        , position = Top 
        , lowerOnStart = True
-       , commands = [ Run Network "eth0" ["-L","0","-H","32","--normal","#429942","--high","#A36666"] 20
-                    , Run Cpu ["-L","3","-H","50","--normal","#429942","--high","#A36666"] 10
+       , commands = [ Run Cpu ["-L","3","-H","50","--normal","#429942","--high","#A36666"] 10
                     , Run Memory ["-t","<usedratio>%"] 10
  		    , Run Date "%a %b %_d  %H:%M" "date" 10
 		    , Run Com "sh" ["~/source/mpd.sh"] "mpd" 10
@@ -13,6 +11,6 @@ Config { font = "-*-terminus-*-*-*-*-12-*-*-*-*-*-*-u"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %StdinReader% }{ | %mpd% | %cpu% | %memory% | %eth0% | %date%"
+       , template = " %StdinReader% }{ | %mpd% | %cpu% | %memory% | %date%"
        }
 
