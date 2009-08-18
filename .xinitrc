@@ -20,13 +20,13 @@ firefox &
 # Daemons
 xcompmgr -c &
 mpdscribble &
-tleds -d 100 eth0 &
+#tleds -d 100 eth0 &
 
 # Change to dvorak & map Caps_Lock to mod4
 setxkbmap dvorak &
-exec xmodmap -e "remove Lock = Caps_Lock" &&
-exec xmodmap -e "clear mod4" &&
-exec xmodmap -e "add Mod4 = Caps_Lock" &&
+exec xmodmap -e "remove Lock = Caps_Lock" &
+exec xmodmap -e "clear mod4" &
+exec xmodmap -e "add Mod4 = Caps_Lock" &
 
 # Start WM (xmonad)
 exec xmonad 
